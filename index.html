@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirección de Gestión de Personas | Repositorio Institucional</title>
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brandBg: '#7AB2D4',
+                        brandTextDark: '#1E1E1E',
+                        brandTextLight: '#FFFFFF',
+                        brandBlue: '#4D98C5',
+                        brandPink: '#EE2183',
+                        brandOrange: '#FF5B00',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #7AB2D4;
+            color: #1E1E1E;
+            min-height: 100vh;
+        }
+
+        .btn-pink {
+            background-color: #EE2183;
+            color: #FFFFFF;
+            transition: all 0.25s ease;
+        }
+        .btn-pink:hover {
+            background-color: #d41772;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(238, 33, 131, 0.35);
+        }
+
+        .btn-orange {
+            background-color: #FF5B00;
+            color: #FFFFFF;
+            transition: all 0.25s ease;
+        }
+        .btn-orange:hover {
+            background-color: #e05000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 91, 0, 0.35);
+        }
+
+        .btn-blue {
+            background-color: #4D98C5;
+            color: #FFFFFF;
+            transition: all 0.25s ease;
+        }
+        .btn-blue:hover {
+            background-color: #3b82ad;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(77, 152, 197, 0.35);
+        }
+
+        .card-custom {
+            background: #FFFFFF;
+            color: #1E1E1E;
+            border-radius: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(30, 30, 30, 0.15);
+        }
+
+        /* Glassmorphic elements for contrast against #7AB2D4 background */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .glass-header {
+            background: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #7AB2D4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4D98C5;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #EE2183;
+        }
+    </style>
+</head>
+<body class="flex flex-col justify-between min-h-screen">
+
+    <!-- Header -->
+    <header class="glass-header text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo & Title -->
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <img src="UNIACC_LOGO2.png" 
+                     alt="Logo UNIACC" 
+                     class="h-9 sm:h-11 w-auto object-contain" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/160x50/1E1E1E/FFFFFF?text=UNIACC';" />
+                <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#EE2183] to-[#FF5B00] flex items-center justify-center text-white font-extrabold text-lg shadow-md hidden md:flex">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-sm sm:text-lg tracking-tight text-white">DIRECCIÓN DE GESTIÓN DE PERSONAS</h1>
+                    <p class="text-xs text-gray-300 font-medium hidden sm:block">Repositorio Institucional de Recursos e Información</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 w-full">
+        <div class="glass-panel rounded-3xl p-6 sm:p-10 shadow-xl border border-white/40 text-center relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-[#EE2183]/20 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-[#FF5B00]/20 rounded-full blur-2xl pointer-events-none"></div>
+
+            <!-- 3 Main Action Buttons Required by User -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Botón Rex+ -->
+                <a href="https://www.google.cl/index.html" target="_blank" class="btn-pink rounded-2xl p-6 text-left flex flex-col justify-between h-44 shadow-lg group relative overflow-hidden">
+                    <div class="flex justify-between items-start w-full z-10">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white text-2xl font-bold">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                        </div>
+                        <span class="bg-white/20 text-xs px-2.5 py-1 rounded-full text-white font-semibold group-hover:bg-white group-hover:text-[#EE2183] transition">
+                            Explorar <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </span>
+                    </div>
+                    <div class="z-10">
+                        <h3 class="text-2xl font-extrabold text-white mb-1">Rex+</h3>
+                        <p class="text-white/90 text-xs font-medium">Liquidaciones, vacaciones, certificados y licencias médicas.</p>
+                    </div>
+                    <i class="fa-solid fa-receipt absolute -right-4 -bottom-4 text-8xl text-white/10 group-hover:scale-110 transition duration-300"></i>
+                </a>
+
+                <!-- Botón Evaluación de desempeño -->
+                <a href="https://davdauniacc.github.io/evaluacion-2026/" target="_blank" class="btn-blue rounded-2xl p-6 text-left flex flex-col justify-between h-44 shadow-lg group relative overflow-hidden">
+                    <div class="flex justify-between items-start w-full z-10">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white text-2xl font-bold">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <span class="bg-white/20 text-xs px-2.5 py-1 rounded-full text-white font-semibold group-hover:bg-white group-hover:text-[#4D98C5] transition">
+                            Explorar <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </span>
+                    </div>
+                    <div class="z-10">
+                        <h3 class="text-2xl font-extrabold text-white mb-1">Evaluación de Desempeño</h3>
+                        <p class="text-white/90 text-xs font-medium">Metas anuales, feedback 360°, guías de desarrollo y KPIs.</p>
+                    </div>
+                    <i class="fa-solid fa-bullseye absolute -right-4 -bottom-4 text-8xl text-white/10 group-hover:scale-110 transition duration-300"></i>
+                </a>
+
+                <!-- Botón GeoVictoria -->
+                <a href="https://view.genially.com/6a612f151e554f12858bcf37" target="_blank" class="btn-orange rounded-2xl p-6 text-left flex flex-col justify-between h-44 shadow-lg group relative overflow-hidden">
+                    <div class="flex justify-between items-start w-full z-10">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white text-2xl font-bold">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <span class="bg-white/20 text-xs px-2.5 py-1 rounded-full text-white font-semibold group-hover:bg-white group-hover:text-[#FF5B00] transition">
+                            Explorar <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </span>
+                    </div>
+                    <div class="z-10">
+                        <h3 class="text-2xl font-extrabold text-white mb-1">GeoVictoria</h3>
+                        <p class="text-white/90 text-xs font-medium">Instructivo para jefaturas y videotutoriales para ingreso, aprobación de horas extra y reportes.</p>
+                    </div>
+                    <i class="fa-solid fa-user-clock absolute -right-4 -bottom-4 text-8xl text-white/10 group-hover:scale-110 transition duration-300"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Platform Access Banner -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 w-full">
+        <div class="bg-[#1E1E1E] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden border border-white/10">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                <div class="lg:col-span-1">
+                    <span class="text-[#FF5B00] text-xs font-bold uppercase tracking-wider">Enlaces Directos Web</span>
+                    <h3 class="text-2xl font-extrabold mt-1 mb-2">Ingreso a Plataformas</h3>
+                    <p class="text-gray-300 text-sm">Accede directamente a los portales oficiales.</p>
+                </div>
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- Link Rex -->
+                    <a href="https://www.mirexmas.com/es-CL/login" target="_blank" class="bg-white/10 hover:bg-white/20 p-4 rounded-xl border border-white/10 transition flex flex-col justify-between group">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-3 h-3 rounded-full bg-[#EE2183]"></span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-white"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm text-white">Portal Rex+</p>
+                            <p class="text-xs text-gray-400 mt-0.5">Gestión de Personas</p>
+                        </div>
+                    </a>
+
+                    <!-- Link Evaluacion -->
+                    <a href="https://www.google.com/" target="_blank" class="bg-white/10 hover:bg-white/20 p-4 rounded-xl border border-white/10 transition flex flex-col justify-between group">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-3 h-3 rounded-full bg-[#4D98C5]"></span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-white"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm text-white">Sitio 2</p>
+                            <p class="text-xs text-gray-400 mt-0.5">Descripción</p>
+                        </div>
+                    </a>
+
+                    <!-- Link GeoVictoria -->
+                    <a href="https://www.google.com/" target="_blank" class="bg-white/10 hover:bg-white/20 p-4 rounded-xl border border-white/10 transition flex flex-col justify-between group">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-3 h-3 rounded-full bg-[#FF5B00]"></span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-white"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm text-white">Sitio 3</p>
+                            <p class="text-xs text-gray-400 mt-0.5">Descripción</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ & Helpdesk -->
+    <section id="contacto" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 w-full">
+        <!-- FAQ Accordion -->
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl shadow-lg border border-white/40 w-full">
+            <h3 class="text-xl font-extrabold text-[#1E1E1E] mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-circle-question text-[#EE2183]"></i>
+                Preguntas Frecuentes de RRHH
+            </h3>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl p-4 border border-gray-200 cursor-pointer">
+                    <summary class="font-semibold text-sm text-[#1E1E1E] flex justify-between items-center list-none">
+                        <span>¿Cómo descargo mis liquidaciones de sueldo anteriores en Rex+?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="text-xs text-gray-600 mt-3 leading-relaxed">
+                        Ingresa al Portal Rex+ con tu RUT y contraseña. En el menú lateral selecciona "Mis Documentos" > "Liquidaciones". Podrás filtrar por año y descargar en formato PDF digital firmado.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-xl p-4 border border-gray-200 cursor-pointer">
+                    <summary class="font-semibold text-sm text-[#1E1E1E] flex justify-between items-center list-none">
+                        <span>¿Qué debo hacer si olvidé marcar asistencia en GeoVictoria?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="text-xs text-gray-600 mt-3 leading-relaxed">
+                        Debes ingresar una "Justificación de Marca" a través del portal GeoVictoria o la App Móvil en un plazo no mayor a 48 horas para que tu jefatura directa pueda aprobarla.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-xl p-4 border border-gray-200 cursor-pointer">
+                    <summary class="font-semibold text-sm text-[#1E1E1E] flex justify-between items-center list-none">
+                        <span>¿Cuándo comienza el proceso de Evaluación de Desempeño?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="text-xs text-gray-600 mt-3 leading-relaxed">
+                        El ciclo anual comprende 3 etapas: Fijación de Metas (Marzo), Revisión de Medio Año (Julio) y Evaluación Final (Noviembre). Recibirás notificaciones en tu correo corporativo.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1E1E1E] text-white py-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-[#EE2183] flex items-center justify-center text-white text-sm font-bold">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+                <span class="text-xs text-gray-300 font-medium">© 2026 Dirección de Gestión de Personas. UNIACC. Todos los derechos reservados.</span>
+            </div>
+            <div class="flex space-x-6 text-xs text-gray-400">
+                <span class="hover:text-white transition">Rex+</span>
+                <span>•</span>
+                <span class="hover:text-white transition">Evaluación de Desempeño</span>
+                <span>•</span>
+                <span class="hover:text-white transition">GeoVictoria</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Document View Modal -->
+    <div id="documentModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 text-[#1E1E1E] relative">
+            <button onclick="closeModal('documentModal')" class="absolute top-6 right-6 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <span id="modalCategoryBadge" class="bg-[#EE2183] text-white text-xs px-3 py-1 rounded-full font-bold">
+                    Categoría
+                </span>
+                <span id="modalFormatBadge" class="bg-gray-100 text-gray-600 text-xs px-2.5 py-1 rounded-md font-semibold">
+                    PDF
+                </span>
+            </div>
+
+            <h3 id="modalTitle" class="text-xl sm:text-2xl font-extrabold text-[#1E1E1E] mb-2">
+                Título del Documento
+            </h3>
+            <p id="modalDesc" class="text-xs sm:text-sm text-gray-600 mb-6 leading-relaxed">
+                Descripción detallada del contenido del documento oficial.
+            </p>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 mb-6">
+                <h4 class="text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Detalles del Archivo</h4>
+                <div class="grid grid-cols-2 gap-4 text-xs">
+                    <div>
+                        <span class="text-gray-400 block">Última actualización:</span>
+                        <span id="modalDate" class="font-semibold text-[#1E1E1E]">15 Enero, 2026</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 block">Tamaño aproximado:</span>
+                        <span id="modalSize" class="font-semibold text-[#1E1E1E]">2.4 MB</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 block">Dirigido a:</span>
+                        <span id="modalTarget" class="font-semibold text-[#1E1E1E]">Todo el Personal</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 block">Estado:</span>
+                        <span class="font-semibold text-green-600">Vigente 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+                <button onclick="simulateDownload()" class="btn-pink flex-1 py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-download"></i> Descargar Documento
+                </button>
+                <button onclick="copyDocLink()" class="bg-gray-100 hover:bg-gray-200 text-[#1E1E1E] px-4 py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-link"></i> Copiar Enlace
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-[#1E1E1E] text-white px-5 py-3 rounded-2xl shadow-2xl z-50 hidden flex items-center gap-3 border border-white/20 transition-all transform translate-y-10">
+        <i class="fa-solid fa-circle-check text-[#EE2183]" id="toastIcon"></i>
+        <span id="toastMsg" class="text-xs font-semibold">Notificación enviada con éxito.</span>
+    </div>
+
+    <script>
+        // Database of Resources
+        const resources = [
+            {
+                id: 1,
+                category: 'rex',
+                categoryName: 'Rex+',
+                color: '#EE2183',
+                title: 'Manual de Usuario - Portal Colaborador Rex+',
+                desc: 'Guía paso a paso para acceder a tus liquidaciones, descargar certificados de antigüedad laboral y solicitar vacaciones.',
+                date: '10 Feb 2026',
+                size: '3.1 MB',
+                format: 'PDF',
+                icon: 'fa-file-pdf',
+                target: 'Todos los Colaboradores'
+            },
+            {
+                id: 2,
+                category: 'rex',
+                categoryName: 'Rex+',
+                color: '#EE2183',
+                title: 'Instructivo Solicitud de Licencias Médicas Digitales',
+                desc: 'Procedimiento institucional para la notificación y tramitación de licencias médicas a través del módulo Rex+.',
+                date: '02 Ene 2026',
+                size: '1.8 MB',
+                format: 'PDF',
+                icon: 'fa-notes-medical',
+                target: 'Todos los Colaboradores'
+            },
+            {
+                id: 3,
+                category: 'evaluacion',
+                categoryName: 'Evaluación de Desempeño',
+                color: '#4D98C5',
+                title: 'Guía Metodológica: Carga de Objetivos y KPIs 2026',
+                desc: 'Criterios SMART para la definición de metas anuales entre jefaturas y equipos en la plataforma de desempeño.',
+                date: '15 Mar 2026',
+                size: '4.5 MB',
+                format: 'PDF',
+                icon: 'fa-bullseye',
+                target: 'Líderes y Colaboradores'
+            },
+            {
+                id: 4,
+                category: 'evaluacion',
+                categoryName: 'Evaluación de Desempeño',
+                color: '#4D98C5',
+                title: 'Manual de Feedback Continuo y Evaluación 360°',
+                desc: 'Recomendaciones prácticas para la preparación de reuniones de retroalimentación constructiva.',
+                date: '20 Feb 2026',
+                size: '2.9 MB',
+                format: 'PDF',
+                icon: 'fa-comments',
+                target: 'Jefaturas y Gerencias'
+            },
+            {
+                id: 5,
+                category: 'geovictoria',
+                categoryName: 'GeoVictoria',
+                color: '#FF5B00',
+                title: 'Manual de Uso: App Móvil GeoVictoria',
+                desc: 'Instrucciones para la habilitación de geolocalización, marcaje con reconocimiento facial y registro de marca en terreno.',
+                date: '12 Ene 2026',
+                size: '5.2 MB',
+                format: 'PDF',
+                icon: 'fa-mobile-screen-button',
+                target: 'Personal Operativo y Terreno'
+            },
+            {
+                id: 6,
+                category: 'geovictoria',
+                categoryName: 'GeoVictoria',
+                color: '#FF5B00',
+                title: 'Protocolo de Regulación de Marcas y Justificaciones',
+                desc: 'Paso a paso para ingresar omitidos de marcas y gestionar permisos de salida en el portal GeoVictoria Web.',
+                date: '05 Feb 2026',
+                size: '1.5 MB',
+                format: 'PDF',
+                icon: 'fa-clock-rotate-left',
+                target: 'Todos los Colaboradores'
+            },
+            {
+                id: 7,
+                category: 'general',
+                categoryName: 'Políticas Generales',
+                color: '#1E1E1E',
+                title: 'Reglamento Interno de Orden, Higiene y Seguridad 2026',
+                desc: 'Documento normativo institucional con los derechos, deberes y protocolos generales de la organización.',
+                date: '01 Ene 2026',
+                size: '8.4 MB',
+                format: 'PDF',
+                icon: 'fa-book-bookmark',
+                target: 'Todo el Personal'
+            },
+            {
+                id: 8,
+                category: 'general',
+                categoryName: 'Políticas Generales',
+                color: '#1E1E1E',
+                title: 'Protocolo de Beneficios Corporativos y Convenios',
+                desc: 'Catálogo de convenios de salud, seguro complementario, caja de compensación y permisos especiales.',
+                date: '18 Ene 2026',
+                size: '3.8 MB',
+                format: 'PDF',
+                icon: 'fa-gift',
+                target: 'Todo el Personal'
+            }
+        ];
+
+        let currentCategory = 'all';
+
+        // Render cards safely checking element presence
+        function renderResources(items) {
+            const grid = document.getElementById('resourcesGrid');
+            const emptyState = document.getElementById('emptyState');
+            const countLabel = document.getElementById('resourceCount');
+
+            if (!grid) return; // Exit if the grid section was removed from DOM
+
+            grid.innerHTML = '';
+            if (countLabel) {
+                countLabel.innerText = `${items.length} Documento${items.length === 1 ? '' : 's'}`;
+            }
+
+            if (items.length === 0) {
+                grid.classList.add('hidden');
+                if (emptyState) emptyState.classList.remove('hidden');
+                return;
+            }
+
+            grid.classList.remove('hidden');
+            if (emptyState) emptyState.classList.add('hidden');
+
+            items.forEach(doc => {
+                const card = document.createElement('div');
+                card.className = 'card-custom p-6 flex flex-col justify-between border border-gray-100 shadow-md hover:shadow-xl transition relative';
+                
+                // Color badge logic
+                let badgeClass = 'bg-[#1E1E1E] text-white';
+                if (doc.category === 'rex') badgeClass = 'bg-[#EE2183] text-white';
+                if (doc.category === 'evaluacion') badgeClass = 'bg-[#4D98C5] text-white';
+                if (doc.category === 'geovictoria') badgeClass = 'bg-[#FF5B00] text-white';
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="${badgeClass} text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                                ${doc.categoryName}
+                            </span>
+                            <span class="text-xs font-medium text-gray-400">
+                                <i class="fa-regular fa-file-pdf text-[#EE2183] mr-1"></i> ${doc.format}
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-start gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center text-gray-700 text-lg flex-shrink-0">
+                                <i class="fa-solid ${doc.icon}"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-[#1E1E1E] leading-snug group-hover:text-[#4D98C5] transition">
+                                ${doc.title}
+                            </h4>
+                        </div>
+                        
+                        <p class="text-xs text-gray-600 mb-6 leading-relaxed">
+                            ${doc.desc}
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-[11px] text-gray-400 font-medium">
+                            <i class="fa-regular fa-calendar mr-1"></i> ${doc.date}
+                        </span>
+                        <div class="flex gap-2">
+                            <button onclick="openDocModal(${doc.id})" class="text-xs font-bold text-[#4D98C5] hover:text-[#1E1E1E] bg-gray-50 hover:bg-gray-100 px-3 py-1.5 rounded-lg transition flex items-center gap-1">
+                                <i class="fa-solid fa-eye"></i> Ver
+                            </button>
+                            <button onclick="simulateDownload('${doc.title}')" class="text-xs font-bold text-white bg-[#1E1E1E] hover:bg-[#EE2183] px-3 py-1.5 rounded-lg transition flex items-center gap-1">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter by Category safely
+        function filterCategory(cat) {
+            currentCategory = cat;
+            
+            // Update UI Active Pill
+            document.querySelectorAll('.cat-pill').forEach(btn => {
+                btn.className = 'cat-pill px-4 py-2 rounded-xl text-xs font-bold transition bg-gray-100 text-[#1E1E1E] hover:bg-gray-200';
+            });
+
+            const activeBtn = document.getElementById(`btn-cat-${cat}`);
+            if (activeBtn) {
+                activeBtn.className = 'cat-pill active-pill px-4 py-2 rounded-xl text-xs font-bold transition bg-[#1E1E1E] text-white shadow-md';
+            }
+
+            // Update title safely
+            const titleElement = document.getElementById('catalogTitle');
+            if (titleElement) {
+                if (cat === 'rex') titleElement.innerText = 'Recursos Rex+';
+                else if (cat === 'evaluacion') titleElement.innerText = 'Recursos Evaluación de Desempeño';
+                else if (cat === 'geovictoria') titleElement.innerText = 'Recursos GeoVictoria';
+                else if (cat === 'general') titleElement.innerText = 'Políticas Generales';
+                else titleElement.innerText = 'Todos los Recursos Disponibles';
+            }
+
+            applyFilters();
+            
+            // Scroll smooth if search section exists
+            const catalog = document.getElementById('search-section');
+            if (catalog) {
+                catalog.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                // If search section doesn't exist, show feedback or scroll to FAQ
+                showNotification('Módulo seleccionado: ' + cat.toUpperCase());
+            }
+        }
+
+        // Search Logic
+        function handleSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const clearBtn = document.getElementById('clearBtn');
+            if (searchInput && clearBtn) {
+                if (searchInput.value.trim() !== '') {
+                    clearBtn.classList.remove('hidden');
+                } else {
+                    clearBtn.classList.add('hidden');
+                }
+            }
+            applyFilters();
+        }
+
+        function clearSearch() {
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.value = '';
+            }
+            const clearBtn = document.getElementById('clearBtn');
+            if (clearBtn) {
+                clearBtn.classList.add('hidden');
+            }
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const searchInput = document.getElementById('searchInput');
+            const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+            
+            const filtered = resources.filter(item => {
+                const matchesCat = (currentCategory === 'all') || (item.category === currentCategory);
+                const matchesQuery = !query || item.title.toLowerCase().includes(query) || 
+                                     item.desc.toLowerCase().includes(query) ||
+                                     item.categoryName.toLowerCase().includes(query);
+                return matchesCat && matchesQuery;
+            });
+
+            renderResources(filtered);
+        }
+
+        function scrollToSearch() {
+            const searchSection = document.getElementById('search-section');
+            if (searchSection) {
+                searchSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Modal Handlers
+        let activeModalDoc = null;
+
+        function openDocModal(docId) {
+            const doc = resources.find(r => r.id === docId);
+            if (!doc) return;
+
+            activeModalDoc = doc;
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalBadge = document.getElementById('modalCategoryBadge');
+            const modalDate = document.getElementById('modalDate');
+            const modalSize = document.getElementById('modalSize');
+            const modalTarget = document.getElementById('modalTarget');
+
+            if (modalTitle) modalTitle.innerText = doc.title;
+            if (modalDesc) modalDesc.innerText = doc.desc;
+            if (modalBadge) {
+                modalBadge.innerText = doc.categoryName;
+                modalBadge.style.backgroundColor = doc.color;
+            }
+            if (modalDate) modalDate.innerText = doc.date;
+            if (modalSize) modalSize.innerText = doc.size;
+            if (modalTarget) modalTarget.innerText = doc.target;
+
+            openModal('documentModal');
+        }
+
+        function openModal(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Action feedback
+        function showNotification(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            if (!toast || !toastMsg) return;
+
+            toastMsg.innerText = msg;
+            
+            toast.classList.remove('hidden', 'translate-y-10');
+            toast.classList.add('translate-y-0');
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-10');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 300);
+            }, 3500);
+        }
+
+        function simulateDownload(name) {
+            const docName = name || (activeModalDoc ? activeModalDoc.title : 'Documento Institucional');
+            showNotification(`Descargando: ${docName}`);
+            if (activeModalDoc) closeModal('documentModal');
+        }
+
+        function copyDocLink() {
+            const dummyUrl = window.location.href + '#doc-' + (activeModalDoc ? activeModalDoc.id : '1');
+            const tempInput = document.createElement('input');
+            document.body.appendChild(tempInput);
+            tempInput.value = dummyUrl;
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showNotification('Enlace copiado al portapapeles');
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            closeModal('contacto-modal');
+            showNotification('¡Solicitud enviada! Un ejecutivo te responderá a la brevedad.');
+        }
+
+        // Initial render on load safely
+        window.onload = function() {
+            if (document.getElementById('resourcesGrid')) {
+                renderResources(resources);
+            }
+        };
+    </script>
+</body>
+</html>
