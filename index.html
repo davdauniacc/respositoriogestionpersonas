@@ -262,11 +262,11 @@
             <div class="space-y-4">
                 <details class="group bg-white rounded-xl p-4 border border-gray-200 cursor-pointer">
                     <summary class="font-semibold text-sm text-[#1E1E1E] flex justify-between items-center list-none">
-                        <span>¿Cómo descargo mis liquidaciones de sueldo anteriores en Rex+?</span>
+                        <span>¿Pregunta 1?</span>
                         <i class="fa-solid fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
                     </summary>
                     <p class="text-xs text-gray-600 mt-3 leading-relaxed">
-                        Ingresa al Portal Rex+ con tu RUT y contraseña. En el menú lateral selecciona "Mis Documentos" > "Liquidaciones". Podrás filtrar por año y descargar en formato PDF digital firmado.
+                        Respuesta 1.
                     </p>
                 </details>
 
@@ -276,7 +276,7 @@
                         <i class="fa-solid fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
                     </summary>
                     <p class="text-xs text-gray-600 mt-3 leading-relaxed">
-                        Debes ingresar una "Justificación de Marca" a través del portal GeoVictoria o la App Móvil en un plazo no mayor a 48 horas para que tu jefatura directa pueda aprobarla.
+                        Respuesta 2.
                     </p>
                 </details>
 
@@ -286,7 +286,7 @@
                         <i class="fa-solid fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
                     </summary>
                     <p class="text-xs text-gray-600 mt-3 leading-relaxed">
-                        El ciclo anual comprende 3 etapas: Fijación de Metas (Marzo), Revisión de Medio Año (Julio) y Evaluación Final (Noviembre). Recibirás notificaciones en tu correo corporativo.
+                        Respuesta 3.
                     </p>
                 </details>
             </div>
@@ -312,67 +312,6 @@
         </div>
     </footer>
 
-    <!-- Document View Modal -->
-    <div id="documentModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 text-[#1E1E1E] relative">
-            <button onclick="closeModal('documentModal')" class="absolute top-6 right-6 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <div class="flex items-center gap-3 mb-4">
-                <span id="modalCategoryBadge" class="bg-[#EE2183] text-white text-xs px-3 py-1 rounded-full font-bold">
-                    Categoría
-                </span>
-                <span id="modalFormatBadge" class="bg-gray-100 text-gray-600 text-xs px-2.5 py-1 rounded-md font-semibold">
-                    PDF
-                </span>
-            </div>
-
-            <h3 id="modalTitle" class="text-xl sm:text-2xl font-extrabold text-[#1E1E1E] mb-2">
-                Título del Documento
-            </h3>
-            <p id="modalDesc" class="text-xs sm:text-sm text-gray-600 mb-6 leading-relaxed">
-                Descripción detallada del contenido del documento oficial.
-            </p>
-
-            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 mb-6">
-                <h4 class="text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Detalles del Archivo</h4>
-                <div class="grid grid-cols-2 gap-4 text-xs">
-                    <div>
-                        <span class="text-gray-400 block">Última actualización:</span>
-                        <span id="modalDate" class="font-semibold text-[#1E1E1E]">15 Enero, 2026</span>
-                    </div>
-                    <div>
-                        <span class="text-gray-400 block">Tamaño aproximado:</span>
-                        <span id="modalSize" class="font-semibold text-[#1E1E1E]">2.4 MB</span>
-                    </div>
-                    <div>
-                        <span class="text-gray-400 block">Dirigido a:</span>
-                        <span id="modalTarget" class="font-semibold text-[#1E1E1E]">Todo el Personal</span>
-                    </div>
-                    <div>
-                        <span class="text-gray-400 block">Estado:</span>
-                        <span class="font-semibold text-green-600">Vigente 2026</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col sm:flex-row gap-3">
-                <button onclick="simulateDownload()" class="btn-pink flex-1 py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-download"></i> Descargar Documento
-                </button>
-                <button onclick="copyDocLink()" class="bg-gray-100 hover:bg-gray-200 text-[#1E1E1E] px-4 py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-link"></i> Copiar Enlace
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Notification Toast -->
-    <div id="toast" class="fixed bottom-6 right-6 bg-[#1E1E1E] text-white px-5 py-3 rounded-2xl shadow-2xl z-50 hidden flex items-center gap-3 border border-white/20 transition-all transform translate-y-10">
-        <i class="fa-solid fa-circle-check text-[#EE2183]" id="toastIcon"></i>
-        <span id="toastMsg" class="text-xs font-semibold">Notificación enviada con éxito.</span>
-    </div>
 
     <script>
         // Database of Resources
